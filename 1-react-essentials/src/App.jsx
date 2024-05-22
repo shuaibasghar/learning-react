@@ -1,29 +1,30 @@
-import reactImage from "./assets/react-core-concepts.png";
-import componentsImg from "./assets/components.png";
+// import componentsImg from "./assets/components.png";
 import { CORE_CONCEPTS } from "./data.js";
+import Header from "./components/Header.jsx";
+import CoreConcepts from "./components/CoreConcepts.jsx";
 function App() {
-  const reactDescription = ["Fundamental", "Crucial", "Core"];
+  // const reactDescription = ["Fundamental", "Crucial", "Core"];
 
-  function getRandomInt(max) {
-    return Math.floor(Math.random() * (max + 1)); // this function will return a random number between 0 and max
-  }
-  const description = reactDescription[getRandomInt(2)];
+  // function getRandomInt(max) {
+  //   return Math.floor(Math.random() * (max + 1)); // this function will return a random number between 0 and max
+  // }
+  // const description = reactDescription[getRandomInt(2)];
   //header component
-  function Header() {
-    return (
-      <header>
-        {/* <img src="src/assets/react-core-concepts.png" alt="Stylized atom" /> */}
-        <img src={reactImage} alt="Stylized atom" />
+  // function Header() {
+  //   return (
+  //     <header>
+  //       {/* <img src="src/assets/react-core-concepts.png" alt="Stylized atom" /> */}
+  //       <img src={reactImage} alt="Stylized atom" />
 
-        <h1>React Essentials</h1>
-        <p>
-          {/* {reactDescription[getRandomInt(2)]} React concepts you will need for */}
-          {description} React concepts you will need for almost any app you are
-          going to build!
-        </p>
-      </header>
-    );
-  }
+  //       <h1>React Essentials</h1>
+  //       <p>
+  //         {/* {reactDescription[getRandomInt(2)]} React concepts you will need for */}
+  //         {description} React concepts you will need for almost any app you are
+  //         going to build!
+  //       </p>
+  //     </header>
+  //   );
+  // }
   //1. Core Concept component
   // function CoreConcepts(props) {
   //   // console.log(props);
@@ -37,15 +38,15 @@ function App() {
   // }
 
   // 2. Core Concept component
-  function CoreConcepts({ title, description, image }) {
-    return (
-      <li>
-        <img src={image} alt={title} />
-        <h3>{title}</h3>
-        <p>{description}</p>
-      </li>
-    );
-  }
+  // function CoreConcepts({ title, description, image }) {
+  //   return (
+  //     <li>
+  //       <img src={image} alt={title} />
+  //       <h3>{title}</h3>
+  //       <p>{description}</p>
+  //     </li>
+  //   );
+  // }
   // normally we use  a javascript function by calling it like Header()
   // but in React we do not use like this
   // you can use you component function is like a regular HTML element like <Header /> with self closing tag
