@@ -1,3 +1,4 @@
+import reactImage from "./assets/react-core-concepts.png";
 function App() {
   const reactDescription = ["Fundamental", "Crucial", "Core"];
 
@@ -9,7 +10,9 @@ function App() {
   function Header() {
     return (
       <header>
-        <img src="src/assets/react-core-concepts.png" alt="Stylized atom" />
+        {/* <img src="src/assets/react-core-concepts.png" alt="Stylized atom" /> */}
+        <img src={reactImage} alt="Stylized atom" />
+
         <h1>React Essentials</h1>
         <p>
           {/* {reactDescription[getRandomInt(2)]} React concepts you will need for */}

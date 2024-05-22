@@ -149,3 +149,17 @@ see in App.jsx file
 {reactDescription[getRandomInt(2)]} React concepts you will need for almost any app you are going to build!
 // changes on run time
 */
+
+////////////////////////----> Step-5<---/////////////////////////////////////////////////////////////////
+
+/***
+ topic--->Setting HTML Attributes Dynamically & Loading Image Files
+
+        <img src="src/assets/react-core-concepts.png" alt="Stylized atom" />
+this way of loading image is not good it may loss in production build
+
+you should use import statement to load image file relative path because now during build process the image file will be copied to the build folder and the path will be adjusted accordingly.
+
+
+
+ */
