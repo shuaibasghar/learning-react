@@ -1,4 +1,6 @@
 import reactImage from "./assets/react-core-concepts.png";
+import componentsImg from "./assets/components.png";
+import { CORE_CONCEPTS } from "./data.js";
 function App() {
   const reactDescription = ["Fundamental", "Crucial", "Core"];
 
@@ -22,7 +24,28 @@ function App() {
       </header>
     );
   }
+  //1. Core Concept component
+  // function CoreConcepts(props) {
+  //   // console.log(props);
+  //   return (
+  //     <li>
+  //       <img src={props.image} alt="..." />
+  //       <h3>{props.title}</h3>
+  //       <p>{props.description}</p>
+  //     </li>
+  //   );
+  // }
 
+  // 2. Core Concept component
+  function CoreConcepts({ title, description, image }) {
+    return (
+      <li>
+        <img src={image} alt={title} />
+        <h3>{title}</h3>
+        <p>{description}</p>
+      </li>
+    );
+  }
   // normally we use  a javascript function by calling it like Header()
   // but in React we do not use like this
   // you can use you component function is like a regular HTML element like <Header /> with self closing tag
@@ -41,7 +64,48 @@ function App() {
       <Header />
 
       <main>
-        <h2>Time to get started!</h2>
+        <section id="core-concepts">
+          <h2>Core Concepts</h2>
+          <ul>
+            {/* <li>
+              <img src="..." alt="..." />
+              <h3>TITLE</h3>
+              <p>DESCRIPTION</p>
+            </li> */}
+            {/* <CoreConcepts
+              title="Components"
+              description="The cord ui building block"
+              image={componentsImg}
+            /> */}
+            {/* <CoreConcepts
+              title={CORE_CONCEPTS[0].title}
+              description={CORE_CONCEPTS[0].description}
+              image={CORE_CONCEPTS[0].image}
+            />
+            <CoreConcepts
+              title={CORE_CONCEPTS[1].title}
+              description={CORE_CONCEPTS[1].description}
+              image={CORE_CONCEPTS[1].image}
+            />
+            <CoreConcepts
+              title={CORE_CONCEPTS[2].title}
+              description={CORE_CONCEPTS[2].description}
+              image={CORE_CONCEPTS[2].image}
+            />
+            <CoreConcepts
+              title={CORE_CONCEPTS[3].title}
+              description={CORE_CONCEPTS[3].description}
+              image={CORE_CONCEPTS[3].image}
+            /> */}
+
+            {/* when property name and value both are same */}
+            <CoreConcepts {...CORE_CONCEPTS[0]} />
+            <CoreConcepts {...CORE_CONCEPTS[1]} />
+            <CoreConcepts {...CORE_CONCEPTS[2]} />
+            <CoreConcepts {...CORE_CONCEPTS[3]} />
+          </ul>
+        </section>
+        {/* <h2>Time to get started!</h2> */}
       </main>
     </div>
   );
