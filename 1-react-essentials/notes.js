@@ -124,3 +124,28 @@ window.__vite_plugin_react_preamble_installed__ = true
 
 
  */
+
+////////////////////////----> Step-4<---/////////////////////////////////////////////////////////////////
+/*
+//---topic covered in this section
+ Using & Outputting Dynamic Values [Core Concept]
+
+
+---> static content
+-- content that's hardcoded into the JSX code
+-- can not change at run time 
+example
+<h1>My First React App</h1>
+
+---> dynamic content
+-- logic that produces the actual value is added to JSX.
+-- Content / value is derived at run time
+example
+<h1>{userName}</h1>
+
+////////////
+see in App.jsx file
+// dynamic content 
+{reactDescription[getRandomInt(2)]} React concepts you will need for almost any app you are going to build!
+// changes on run time
+*/
