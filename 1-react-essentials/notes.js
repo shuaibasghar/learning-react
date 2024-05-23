@@ -388,3 +388,8 @@ BUT IF YOU CLICKED ON ANY TAB BUTTON THEn this log will not be printed again con
 -- send isSelected prop from TabButton where it is called
 -- isSelected will be a boolean variable if then use it in classname={isSelected ? 'active' : null}
  */
+////////////////////////----> Step-12<---/////////////////////////////////////////////////////////////////
+
+// Outputting List Data Dynamically
+
+// array of jsx elements react is able to display them

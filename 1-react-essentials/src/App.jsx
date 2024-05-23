@@ -116,10 +116,16 @@ function App() {
             /> */}
 
             {/* when property name and value both are same */}
+            {/* 
             <CoreConcepts {...CORE_CONCEPTS[0]} />
             <CoreConcepts {...CORE_CONCEPTS[1]} />
             <CoreConcepts {...CORE_CONCEPTS[2]} />
             <CoreConcepts {...CORE_CONCEPTS[3]} />
+             */}
+
+            {CORE_CONCEPTS.map((item) => (
+              <CoreConcepts key={item.title} {...item} />
+            ))}
           </ul>
         </section>
         {/* <h2>Time to get started!</h2> */}
