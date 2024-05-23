@@ -258,3 +258,44 @@ export default function Button({ caption, type = "submit" }) {
 
 
 */
+
+////////////////////////----> Step-7<---/////////////////////////////////////////////////////////////////
+//  topic---> Component Composition: The special "children" Prop
+
+/**
+ 
+import React from "react";
+
+function TabButton(props) {
+  return (
+    <li>
+      <button>{props.children}</button>;
+    </li>
+  );
+}
+
+export default TabButton;
+
+// 
+
+<TabButton>Components</TabButton>    ---this is component composition you will receive an object with special prop children
+
+// Children ---- have value Components
+// Children is a builtin React Prop
+// you can not pass it as attribute
+
+// instead of writing Components ---> you can write the complex jsx code here also
+
+
+// you can also use object destructuring for children prop ---> directly write {children}
+// this approach is especially convenient when passing JSX code as a value to another component
+// for components that take a single piece of renderable content this approach is closer to normal HTML usage.
+
+
+// Using attributes 
+--- <TabButton label="Components"></TabButton> 
+--  this approach makes sense if you got multiple smaller pieces of information that must be passed to a component
+
+-- Adding extra props instead of just wrapping the content with the component tags mean extra work
+
+ */
