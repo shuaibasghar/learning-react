@@ -381,3 +381,10 @@ BUT IF YOU CLICKED ON ANY TAB BUTTON THEn this log will not be printed again con
 
 -- so whenever state update you see APp component rerender and inside App component there TabButton component will also be re-executed
 */
+
+////////////////////////----> Step-11<---/////////////////////////////////////////////////////////////////
+// dynamic css on selected button
+/**
+-- send isSelected prop from TabButton where it is called
+-- isSelected will be a boolean variable if then use it in classname={isSelected ? 'active' : null}
+ */
