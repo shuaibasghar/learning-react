@@ -316,3 +316,68 @@ export default TabButton;
 ////////////////////////----> Step-9<---/////////////////////////////////////////////////////////////////
 //-- topic--> Passing Custom Arguments to Event Functions
 //-- we pass selected button value --- we need to use an anonymous arrow function ()=>clickHanlder("Components")
+
+////////////////////////----> Step-10<---/////////////////////////////////////////////////////////////////
+//--->topic HOw React Checks If ui updates are Needed
+
+/**
+ ---> by default React components execute Only Once
+
+ ---> you have to tell React if a component should be executed again
+
+ ---> React compares the old outputs ("old JSX code") of your component function to the new output("new JSX CODE") AND APPLES any differences to the actual website ui
+
+ ---> Because web app got loaded
+// first time execution 
+ <div>
+<h1>React Essentials</h1>
+</div>
+
+
+// Because of a state update
+ <div>
+<h1>React Essentials</h1>
+<p>Components are Key!</p>
+</div>
+
+
+//---> Identified Differences
+
+Necessary updates will be applied to the real DOM, ENSURING THAT the visible ui matches the expected output.
+
+// App.jsx will  be updated
+
+// console.log('TAB BUTTON COMPONENT RENDERED) ---> IT WILL BE RENDERED 4 TIMES BECAUSE IT  IS CALLED 4 TIMES
+// console.log('APP JSX IS RENDERED')----RENDERED ONLY ONCE
+
+BUT IF YOU CLICKED ON ANY TAB BUTTON THEn this log will not be printed again console.log('TAB BUTTON COMPONENT RENDERED)
+// updating by the regular variable  it will not work because this App  component function is not executing again
+// to execute Function COmponent again is only done by State 
+
+
+
+-- so we can update ui with regular variable because the component  function does not execute again.
+
+-- this can be achieved by crucial React concept called State.
+
+-- you could say, that are handled by React and that are updated with help of a function that's provided by React,
+ 
+-- that will also tell React that data changed and that will therefore cause React to update the UI.
+
+-- we call them React hooks that is useState imported from React
+
+-- those are technically special function 
+
+-- must be called inside of  component function
+
+
+//----> two rules ----of HOOKS 
+
+1. Only call hooks inside of component functions
+2. Only call hooks on the top level
+
+-- Array produced and returned by Reacts useState function contains exactly two elements.
+-- we can use those two elements by desturcturing array giving it any name 
+
+-- so whenever state update you see APp component rerender and inside App component there TabButton component will also be re-executed
+*/
