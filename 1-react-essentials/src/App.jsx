@@ -51,6 +51,11 @@ function App() {
   // normally we use  a javascript function by calling it like Header()
   // but in React we do not use like this
   // you can use you component function is like a regular HTML element like <Header /> with self closing tag
+
+  function clickHandler(selectedButton) {
+    // selectedButton => 'components', 'jsx' , 'props', 'state'
+  }
+
   return (
     <div>
       {/* converting header to custom component */}
@@ -113,11 +118,14 @@ function App() {
           <h2>Examples</h2>
           <menu>
             {/* Component Compisition: The special Children Prop  */}
-            <TabButton>Components</TabButton>
-            <TabButton>JSX</TabButton>
-            <TabButton>Props</TabButton>
-            <TabButton>State</TabButton>
+            <TabButton onSelect={() => clickHandler("components")}>
+              Components
+            </TabButton>
+            <TabButton onSelect={() => clickHandler("jsx")}>JSX</TabButton>
+            <TabButton onSelect={() => clickHandler("props")}>Props</TabButton>
+            <TabButton onSelect={() => clickHandler("state")}>State</TabButton>
           </menu>
+          Dynamic Content
         </section>
       </main>
     </div>

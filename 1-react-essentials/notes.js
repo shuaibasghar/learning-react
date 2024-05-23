@@ -299,3 +299,20 @@ export default TabButton;
 -- Adding extra props instead of just wrapping the content with the component tags mean extra work
 
  */
+
+////////////////////////----> Step-8<---/////////////////////////////////////////////////////////////////
+//  topic---> Adding event handler on click on TabButtons
+// so define a clickHandler function inside TabButton component
+
+// The advantage of defining these event handler functions inside the component function is that they then have the access to the components's props and state
+// function name must be like event name first
+// do not use parent thesis which calling here onClick={handleClick} this will be executed by react when event occurs
+
+//---> Passing Functions as Values to Props
+// now accept props {children,onClick} --- this prop name is upto you name must starts with onClick which simplify that it will be trigger onCLick
+
+// for now cut the function from TabButton and add it in where you have called this button component
+
+////////////////////////----> Step-9<---/////////////////////////////////////////////////////////////////
+//-- topic--> Passing Custom Arguments to Event Functions
+//-- we pass selected button value --- we need to use an anonymous arrow function ()=>clickHanlder("Components")
