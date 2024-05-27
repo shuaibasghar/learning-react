@@ -103,7 +103,7 @@ export default function Tabs({ children }) {
 // ---------import it in examples.jsx and use it replace the menu with <Tabs> </Tabs> and wrap the tab buttons in <Tabs> </Tabs> and wrap the tab content in <Tabs> </Tabs> and remove the menu tag
 import React from "react";
 
-export default function Tabs({ children, buttons }) {
+export default function Tabs({ children, buttons }) {------>slots here are children and buttons
   return (
     <>
       <menu>{buttons}</menu>
@@ -116,4 +116,41 @@ export default function Tabs({ children, buttons }) {
 
 
 
+
  */
+
+/**
+ * ---> Step-04-->Setting Component Types Dynamically
+ * 
+ * 
+ export default function Tabs({ children, buttons }) {------>slots here are children and buttons
+  return (
+    <>
+      <menu>{buttons}</menu>  // you can use this meunu wrapper from where you are sending the buttons props
+
+      or
+
+      or get an additional buttonsContainer prop and use it here to wrap the buttons so now it becomes dynamic what ever you want to use
+      {children}
+    
+      </>
+  );
+}
+
+//-------> reciving buttonsContainer props in Tabs component and using it to wrap the buttons
+//--but how to use buttonsContainer to wrap the buttons
+
+export default function Tabs({ children, buttons, buttonsContainer }) {
+    const ButtonsContainer= buttonsContainer ---> if you use directly in the return statement it will not work bbecause it is starting with lowercase then it will act as html builtin element that is not allowed in react that'swhy we use uppercase and store it in variable and use it in return statement
+    // or you shoudld send and recieve it in PasalCase then no need to store it in variable
+    return (
+        <>
+        {ButtonsContainer}{buttons}{ButtonsContainer}
+        {children}
+        </>
+    );
+
+
+ * 
+ * 
+ * */
