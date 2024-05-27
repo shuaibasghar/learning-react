@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import TabButton from "./components/TabButton";
 import { EXAMPLES } from "./data";
+import Section from "./components/Section";
 
 export default function Examples() {
   const [selectedTopic, setSelectedTopic] = useState();
@@ -26,35 +27,40 @@ export default function Examples() {
   }
 
   return (
-    <section id="examples">
-      <h2>Examples</h2>
+    <Section title={"Examples"} id="examples">
+      {/* <h2>Examples</h2> */}
       <menu>
+        {" "}
+        {/* <menu> is a semantic HTML element */}
         <TabButton
           isSelected={selectedTopic === "components"}
-          onSelect={() => handleSelect("components")}
+          //   onSelect={() => handleSelect("components")}
+
+          // use onClick because we have added forwarding props to the tab component
+          onClick={() => handleSelect("components")}
         >
           Components
         </TabButton>
         <TabButton
           isSelected={selectedTopic === "jsx"}
-          onSelect={() => handleSelect("jsx")}
+          onClick={() => handleSelect("jsx")}
         >
           JSX
         </TabButton>
         <TabButton
           isSelected={selectedTopic === "props"}
-          onSelect={() => handleSelect("props")}
+          onClick={() => handleSelect("props")}
         >
           Props
         </TabButton>
         <TabButton
           isSelected={selectedTopic === "state"}
-          onSelect={() => handleSelect("state")}
+          onClick={() => handleSelect("state")}
         >
           State
         </TabButton>
       </menu>
       {tabContent}
-    </section>
+    </Section>
   );
 }
