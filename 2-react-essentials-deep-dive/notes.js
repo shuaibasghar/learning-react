@@ -83,3 +83,37 @@ export default function TabButton({ children,  isSelected,{...props} }) {
  *
  *
  */
+
+/**
+ * ---> Step-03--> Working with Multiple JSX Slots
+ *
+ * --adding a new reusable component for Tabs
+ 
+import React from "react";
+
+export default function Tabs({ children }) {
+  return (
+    <>
+      <menu></menu>
+      {children}
+    </>
+  );
+}
+
+// ---------import it in examples.jsx and use it replace the menu with <Tabs> </Tabs> and wrap the tab buttons in <Tabs> </Tabs> and wrap the tab content in <Tabs> </Tabs> and remove the menu tag
+import React from "react";
+
+export default function Tabs({ children, buttons }) {
+  return (
+    <>
+      <menu>{buttons}</menu>
+      {children}
+    </>
+  );
+}
+
+
+
+
+
+ */
